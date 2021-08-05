@@ -1,3 +1,3 @@
-# js-8dcqk2
+# CodeSigal Arcade Solved Exercises
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-8dcqk2)
+Solved exercises of programming using javascript.
