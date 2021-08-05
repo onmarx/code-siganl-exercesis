@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 *,*::before,*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 html {box-sizing: border-box;}
-body {font-family: 'arial';}
+body {font-family: 'Space Mono', monospace;}
 
 .container {
-  max-width: 1200px;
+  max-width: 650px;
   margin: 0 auto;
   width: 95%;
+}
+p {
+  font-size: 14px;
 }
 header {
   background-color: #333;
@@ -74,15 +78,14 @@ header h1 {
 }
 /* js change*/
 .card_content {
-  display: block;
+  display: none;
   margin: 15px 0px 0px;
-  line-height: 1.4;
+  line-height: 24px;
 }
 .overview {
   overflow: hidden;
   color: #1e7f9d;
   padding: 5px 0px 0px;
-  border-radius: 3px;
   width: max-content;
   font-size: 12px;
   font-weight: 700;
@@ -97,6 +100,8 @@ header h1 {
 }
 .card ul li {
   margin: 5px;
+  font-size: 14px;
+
 }
 .card_content.active {
   display: block;
@@ -118,7 +123,7 @@ header h1 {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #165f9d;
+  background-color: #333;
 }
 /*js change*/
 .CodeMirror {
@@ -126,24 +131,19 @@ header h1 {
   margin: 10px 0 8px;
   padding: 5px;
   width: 100%;
-  height: 200px;
-  opacity: 0;
-  display: none;
+  height: auto;
+  filter: blur(4px);
 }
 
 .CodeMirror.active {
-  opacity: 1;
-  display: block;
+  filter: blur(0px)
 }
+
 @media (min-width:800px){
   .CodeMirror {
     width: 600px;
     margin: 10px auto 6px;
   }
-}
-
-.CodeMirror-line span[role='presentation']{
-  margin-left: 30px;
 }
 
 .CodeMirror .CodeMirror-linenumber {

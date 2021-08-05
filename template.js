@@ -50,11 +50,10 @@ export function drawCards () {
 
     cardFooter.innerHTML = `
       <div class="btn-container">
-        <button class="btn">Show Answer</button>
+        <button class="btn" value='${e.id}'>Show Answer</button>
       </div>
     `
-    codecontainer.innerHTML = `<div class="js-code">
-      <h1>Hello world</h1>\n</div>`
+    codecontainer.innerHTML = `${e.code}`
 
 
     cardContext.appendChild(ulExamples)
