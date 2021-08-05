@@ -2,5 +2,7 @@
   "name": "js",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "codemirror": "^5.62.2"
+  }
 }

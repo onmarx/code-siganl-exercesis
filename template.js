@@ -10,20 +10,26 @@ export function drawCards () {
     const cardFooter = document.createElement('div');
     const ulExamples = document.createElement('ul')
     const ulTest = document.createElement('ul')
+    const codecontainer = document.createElement('textarea')
 
 
     ulExamples.classList.add( "example" );
     ulTest.classList.add( "test" );
 
     card.classList.add( "card" );
-    cardHeader.classList.add( "card__header");
+    cardHeader.classList.add( "card_main");
     cardContext.classList.add( "card_content" );
     cardFooter.classList.add( "card_footer" );
-
-
+    codecontainer.classList.add("js-code")
+  
     cardHeader.innerHTML = `
-    <h2>${e.title}</h2>
-    <p class="ico">+</p>
+    <div class="card__header">
+      <h2>${e.title}</h2>
+      <p class="ico">+</p> 
+    </div>
+    <div class="overview">
+      <p>${e.overview}</p>
+    </div>
     `
 
     cardContext.innerHTML = `
@@ -43,15 +49,19 @@ export function drawCards () {
     })
 
     cardFooter.innerHTML = `
-      <div class="btn-left">
+      <div class="btn-container">
         <button class="btn">Show Answer</button>
       </div>
     `
+    codecontainer.innerHTML = `<div class="js-code">
+      <h1>Hello world</h1>\n</div>`
+
 
     cardContext.appendChild(ulExamples)
     cardContext.innerHTML += '<h3>Test</h3>'
     cardContext.appendChild(ulTest)
     cardContext.appendChild(cardFooter)
+    cardContext.appendChild(codecontainer)
     card.appendChild(cardHeader)
     card.appendChild(cardContext)
     cardContainer.appendChild(card)
