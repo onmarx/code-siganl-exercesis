@@ -133,12 +133,10 @@ header h1 {
   width: 100%;
   height: auto;
   display: none;
-  filter: blur(4px);
 }
 
 .CodeMirror.active {
   display: block;
-  filter: blur(0px);
 }
 
 @media (min-width:800px){
