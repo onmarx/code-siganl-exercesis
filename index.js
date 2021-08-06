@@ -49,4 +49,31 @@ function showCode () {
   const btnId = this.value
   const jsanswer = document.querySelectorAll('.CodeMirror')
   jsanswer[btnId].classList.toggle('active')
+  jsanswer[btnId].CodeMirror.refresh()
 }
+
+
+// Styles to use display:none and display:block to appear and disappear when pressed
+
+
+
+// codeMirrorObject
+const editor = CodeMirror.fromTextArea(textarea,{
+    lineNumbers:true,
+    tabSize:4,
+    theme: 'material',
+    mode:"javascript",
+    readOnly: true,
+  });
+
+btn.addEventListener('click', showCode)
+
+function showCode () { 
+  const editor= document.querySelector('.CodeMirror')
+  jsanswer.classList.toggle('active')
+  
+  // use the object for refresh CodeMirror 
+  editor.CodeMirror.refresh()
+}
+
+
