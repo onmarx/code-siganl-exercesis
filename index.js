@@ -1,54 +1,60 @@
 // Import stylesheets
 import './style.css';
-import {drawCards} from './template.js'
+import { drawCards } from './template.js';
 
-drawCards()
+drawCards();
 
-const card = document.querySelectorAll('.card_main')
-const btns = document.querySelectorAll('.btn')
-const arryCards = [...card]
+const card = document.querySelectorAll('.card_main');
+const btns = document.querySelectorAll('.btn');
+const arryCards = [...card];
 
-arryCards.forEach(data => data.addEventListener('click', handlerCard))
+arryCards.forEach(data => data.addEventListener('click', handlerCard));
 
-const textareas = new Array(...document.querySelectorAll(".js-code"))
-  .forEach(textarea => drawCode(textarea));
+const textareas = new Array(...document.querySelectorAll('.js-code')).forEach(
+  textarea => drawCode(textarea)
+);
 
-[...btns].forEach(btn => btn.addEventListener('click', showCode))
+[...btns].forEach(btn => btn.addEventListener('click', showCode));
 
+function handlerCard() {
+  const context = this.parentNode.getElementsByClassName('card_content');
 
-function handlerCard () {
-  const context = this.parentNode
-    .getElementsByClassName('card_content')
+  const ico = this.getElementsByClassName('ico')[0];
 
-    const ico = this.getElementsByClassName('ico')[0]
+  context[0].classList.toggle('active');
 
-    context[0].classList.toggle('active')
+  const boolValue = ico.classList.toggle('active');
 
-    const boolValue = ico.classList.toggle('active')
-
-    handlerIco(ico, boolValue)
-    // refresh the codeMirror values 
-   // context[0].querySelector('.CodeMirror').CodeMirror.refresh()
+  handlerIco(ico, boolValue);
+  // refresh the codeMirror values
+  // context[0].querySelector('.CodeMirror').CodeMirror.refresh()
 }
 
-function handlerIco (ico, bool) {
-  bool ? ico.innerHTML = '─' : ico.innerHTML = '+'
+function handlerIco(ico, bool) {
+  bool ? (ico.innerHTML = '─') : (ico.innerHTML = '+');
 }
 
-function drawCode (textarea) {
-  const editor = CodeMirror.fromTextArea(textarea,{
-    lineNumbers:true,
-    tabSize:4,
+function drawCode(textarea) {
+  const editor = CodeMirror.fromTextArea(textarea, {
+    lineNumbers: true,
+    tabSize: 4,
     theme: 'material',
-    mode:"javascript",
-    readOnly: true,
+    mode: 'javascript',
+    readOnly: false,
+    matchBrackets: true,
+    autoCloseTags: true,
+    autoCloseBrackets: true,
+    extraKeys: { 'Ctrl-Space': 'autocomplete' },
+    scrollbarStyle: "simple"
   });
 }
+  // Obtein the value of de javascrit editor
+  //console.log(editor.getValue())
 
-function showCode () { 
-  const btnId = this.value
-  const jsanswer = document.querySelectorAll('.CodeMirror')
-  jsanswer[btnId].classList.toggle('active')
-  jsanswer[btnId].CodeMirror.refresh()
+
+function showCode() {
+  const btnId = this.value;
+  const jsanswer = document.querySelectorAll('.CodeMirror');
+  jsanswer[btnId].classList.toggle('active');
+  jsanswer[btnId].CodeMirror.refresh();
 }
-

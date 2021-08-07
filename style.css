@@ -95,11 +95,10 @@ header h1 {
   margin: 5px 0px 10px;
 }
 .card_content ul {
-  width:80%;
-  margin-left: 30px;
+  width:100%;
 }
 .card ul li {
-  margin: 5px;
+  margin: 5px 0 0 20px;
   font-size: 14px;
 
 }
