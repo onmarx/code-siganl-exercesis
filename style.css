@@ -63,9 +63,10 @@ header h1 {
 }
 .card__header h2 {
   font-size: 22px;
+  text-align: left;
 }
 .card__header.active h2 {
-  color: #1e7f9d;
+  color:red;
 }
 .ico {
   font-size: 24px;
@@ -86,7 +87,6 @@ header h1 {
   overflow: hidden;
   color: #1e7f9d;
   padding: 5px 0px 0px;
-  width: max-content;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer
@@ -100,7 +100,7 @@ header h1 {
 .card ul li {
   margin: 5px 0 0 20px;
   font-size: 14px;
-
+  word-wrap: break-word;
 }
 .card_content.active {
   display: block;

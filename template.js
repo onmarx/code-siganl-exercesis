@@ -15,7 +15,6 @@ export function drawCards () {
 
     ulExamples.classList.add( "example" );
     ulTest.classList.add( "test" );
-
     card.classList.add( "card" );
     cardHeader.classList.add( "card_main");
     cardContext.classList.add( "card_content" );

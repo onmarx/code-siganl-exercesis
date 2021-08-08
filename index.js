@@ -17,23 +17,23 @@ const textareas = new Array(...document.querySelectorAll('.js-code')).forEach(
 [...btns].forEach(btn => btn.addEventListener('click', showCode));
 
 function handlerCard() {
-  const context = this.parentNode.getElementsByClassName('card_content');
-
+  const content = this.parentNode.getElementsByClassName('card_content');
+  const title = this.querySelector('.card__header');
   const ico = this.getElementsByClassName('ico')[0];
-
-  context[0].classList.toggle('active');
-
+  // add || remove classlist
+  content[0].classList.toggle('active');
+  title.classList.toggle('active');
   const boolValue = ico.classList.toggle('active');
-
   handlerIco(ico, boolValue);
   // refresh the codeMirror values
-  // context[0].querySelector('.CodeMirror').CodeMirror.refresh()
+  // content[0].querySelector('.CodeMirror').CodeMirror.refresh()
 }
 
 function handlerIco(ico, bool) {
   bool ? (ico.innerHTML = '─') : (ico.innerHTML = '+');
 }
 
+// styles and configurations for add code on html document
 function drawCode(textarea) {
   const editor = CodeMirror.fromTextArea(textarea, {
     lineNumbers: true,
@@ -45,13 +45,13 @@ function drawCode(textarea) {
     autoCloseTags: true,
     autoCloseBrackets: true,
     extraKeys: { 'Ctrl-Space': 'autocomplete' },
-    scrollbarStyle: "simple"
+    scrollbarStyle: 'simple'
   });
 }
-  // Obtein the value of de javascrit editor
-  //console.log(editor.getValue())
+// Obtein the value of de javascrit editor
+//console.log(editor.getValue())
 
-
+// Show the code when the btn has clicked
 function showCode() {
   const btnId = this.value;
   const jsanswer = document.querySelectorAll('.CodeMirror');
