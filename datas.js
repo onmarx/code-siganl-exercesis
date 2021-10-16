@@ -72,4 +72,27 @@ export const data = [
     'const inputArray = [-23, 4, -3, 8, -12] \n'+
     'adjacentElementsProduct(inputArray) // output -12',
   },
+  {
+    id: 3,
+    title: 'Shape Area',
+    overview: 'Find the area of a polygon for a given n',
+    context: 'A 1-interesting polygon is just a square with a side of length 1. An n-interesting polygon is obtained by taking the <b>n - 1</b> interesting polygon and appending 1-interesting polygons to its rim, side by side. You can see the 1-, 2-, 3- and 4-interesting polygons in the picture below. <img src="https://codesignal.s3.amazonaws.com/tasks/shapeArea/img/area.png?_tm=1624642306583" class="polyng">',
+    examples: [
+      'For n = 2, the output should be <b>shapeArea(n) = 5</b>;',
+      'For n = 3, the output should be <b>shapeArea(n) = 13</b>.'
+    ],
+    test: [
+      'input: 2, Expected Output: 5.',
+      'input: 3, Expected Output: 13.',
+      'input: 1, Expected Output: 1.',
+      'input: 5, Expected Output: 41.',
+      'input: 7000, Expected Output: 97986001.',
+      'input: 8000, Expected Output: 127984001.',
+      'input: 9999, Expected Output: 199940005.',
+      'input: 9998, Expected Output: 199900013.',
+    ],
+    code: 'function shapeArea(n) {\n'+
+    '  return n == 1 ? 1 : (n-1)**2 + n**2;'+
+    '}'
+  },
 ]

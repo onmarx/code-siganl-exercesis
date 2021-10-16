@@ -10,11 +10,14 @@ const arryCards = [...card];
 
 arryCards.forEach(data => data.addEventListener('click', handlerCard));
 
+// colocar el codigo de la api en un editor de codeMirror
 const textareas = new Array(...document.querySelectorAll('.js-code')).forEach(
   textarea => drawCode(textarea)
 );
 
+// Evento para mostrar el codigo con las respuesta
 [...btns].forEach(btn => btn.addEventListener('click', showCode));
+
 
 function handlerCard() {
   const content = this.parentNode.getElementsByClassName('card_content');
