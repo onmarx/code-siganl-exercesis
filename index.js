@@ -60,4 +60,5 @@ function showCode() {
   const jsanswer = document.querySelectorAll('.CodeMirror');
   jsanswer[btnId].classList.toggle('active');
   jsanswer[btnId].CodeMirror.refresh();
+  this.classList.toggle('active') ? (this.innerHTML = 'Hide Answer') : (this.innerHTML = 'Show Answer');
 }
