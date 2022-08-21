@@ -134,6 +134,7 @@ header h1 {
   width: 100%;
   height: auto;
   display: none;
+  border: 1px solid red;
 }
 
 .CodeMirror.active {
@@ -150,6 +151,10 @@ header h1 {
 .CodeMirror .CodeMirror-linenumber {
   margin-left: -5px ;
   user-select: none;
+}
+
+.CodeMirror-scroll .CodeMirror-sizer {
+  margin-left: 0!important;
 }
 
 .polyng {

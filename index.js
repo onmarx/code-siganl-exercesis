@@ -40,15 +40,15 @@ function handlerIco(ico, bool) {
 function drawCode(textarea) {
   const editor = CodeMirror.fromTextArea(textarea, {
     lineNumbers: true,
-    tabSize: 4,
-    theme: 'material',
-    mode: 'javascript',
-    readOnly: false,
-    matchBrackets: true,
-    autoCloseTags: true,
-    autoCloseBrackets: true,
-    extraKeys: { 'Ctrl-Space': 'autocomplete' },
-    scrollbarStyle: 'simple'
+    // tabSize: 4,
+    // theme: 'material',
+    // mode: 'javascript',
+    // readOnly: false,
+    // matchBrackets: true,
+    // autoCloseTags: true,
+    // autoCloseBrackets: true,
+    // extraKeys: { 'Ctrl-Space': 'autocomplete' },
+    // scrollbarStyle: 'simple'
   });
 }
 // Obtein the value of de javascrit editor
