@@ -29,7 +29,7 @@ function handlerCard() {
   const boolValue = ico.classList.toggle('active');
   handlerIco(ico, boolValue);
   // refresh the codeMirror values
-  // content[0].querySelector('.CodeMirror').CodeMirror.refresh()
+  content[0].querySelector('.CodeMirror').CodeMirror.refresh()
 }
 
 function handlerIco(ico, bool) {
@@ -39,16 +39,15 @@ function handlerIco(ico, bool) {
 // styles and configurations for add code on html document
 function drawCode(textarea) {
   const editor = CodeMirror.fromTextArea(textarea, {
-    lineNumbers: true,
-    // tabSize: 4,
-    // theme: 'material',
-    // mode: 'javascript',
-    // readOnly: false,
-    // matchBrackets: true,
-    // autoCloseTags: true,
-    // autoCloseBrackets: true,
-    // extraKeys: { 'Ctrl-Space': 'autocomplete' },
-    // scrollbarStyle: 'simple'
+    lineNumbers: false,
+    tabSize: 2,
+    theme: 'material',
+    mode: 'javascript',
+    readOnly: true,
+    matchBrackets: true,
+    autoCloseTags: true,
+    autoCloseBrackets: true,
+    scrollbarStyle: 'simple'
   });
 }
 // Obtein the value of de javascrit editor

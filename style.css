@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
-html {box-sizing: border-box;}
-body {font-family: 'Space Mono', monospace;}
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Space Mono', monospace;
+}
 
 .container {
-  max-width: 650px;
+  max-width: 1250px;
   margin: 0 auto;
   width: 95%;
 }
@@ -17,7 +23,7 @@ p {
 }
 header {
   background-color: #333;
-  color:white;
+  color: white;
   text-align: center;
   width: 100%;
   line-height: 1.2;
@@ -36,7 +42,7 @@ header h1 {
 .cards_container .logo {
   width: 50px;
   height: 50px;
-  position: absolute;;
+  position: absolute;
   right: 0;
   top: -10px;
 }
@@ -50,10 +56,9 @@ header h1 {
   border-radius: 5px;
   color: #333;
   margin: 15px 0;
-  
 }
 .card_main {
-  margin: 5px 0 ;
+  margin: 5px 0;
 }
 .card__header {
   display: flex;
@@ -67,7 +72,7 @@ header h1 {
   text-align: left;
 }
 .card__header.active h2 {
-  color:red;
+  color: red;
 }
 .ico {
   font-size: 24px;
@@ -90,13 +95,13 @@ header h1 {
   padding: 5px 0px 0px;
   font-size: 12px;
   font-weight: 700;
-  cursor: pointer
+  cursor: pointer;
 }
 .card_content h3 {
   margin: 5px 0px 10px;
 }
 .card_content ul {
-  width:100%;
+  width: 100%;
 }
 .card ul li {
   margin: 5px 0 0 20px;
@@ -129,32 +134,23 @@ header h1 {
 /*js change*/
 .CodeMirror {
   border-radius: 3px;
-  margin: 10px 0 8px;
   padding: 5px;
   width: 100%;
   height: auto;
   display: none;
-  border: 1px solid red;
 }
 
 .CodeMirror.active {
   display: block;
 }
 
-@media (min-width:800px){
-  .CodeMirror {
-    width: 600px;
-    margin: 10px auto 6px;
-  }
-}
-
 .CodeMirror .CodeMirror-linenumber {
-  margin-left: -5px ;
+  margin-left: -5px;
   user-select: none;
 }
 
 .CodeMirror-scroll .CodeMirror-sizer {
-  margin-left: 0!important;
+  margin-left: 0 !important;
 }
 
 .polyng {
